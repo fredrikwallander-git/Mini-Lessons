@@ -1,8 +1,8 @@
 ﻿# Scriptable Objects
 
-## Concept 
-
 Scriptable objects are reusable and editable data containers that situates as assets inside your project.
+
+### Concept:
 
 They are perfect for things like:
 - item definitions
