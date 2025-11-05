@@ -99,7 +99,9 @@ Unity doesn’t automatically save changes to a `ScriptableObject` made via scri
 
 Without the call to `EditorUtility.SetDirty();`, the change appears in memory, but if you close and reopen the Editor the value reverts to its previous value.
 
-Another option is to use AssetDatabase.SaveAssets(); to save immediately if you really need the save to happen instantly and not when Unity decides to do it.
+---
+
+Another option is to use `AssetDatabase.SaveAssets();` to save immediately if you really need the save to happen instantly and not when Unity decides to do it.
 
 ## Messages
 
