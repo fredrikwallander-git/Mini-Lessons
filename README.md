@@ -1,2 +1,2 @@
 # Mini-Lessons
-A set of small lessons to learn specific topics from
+A set of small lessons to learn certain Unity related specifics from.
