@@ -115,7 +115,7 @@ Normally when you pass a variable to a method, the method receives a **copy**, n
 Take a look at this example:
 
 ```csharp
-void Heal(ref in health, int amount)
+void Heal(ref int health, int amount)
 {
     health += amount; // adjust the value of the actual variable and not a copy of the original
 }
