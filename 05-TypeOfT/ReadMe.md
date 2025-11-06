@@ -225,7 +225,7 @@ public class ObjectPool<T> where T : MonoBehaviour
     private T prefab;
     private Transform poolParent;
     
-    public ObjectPool<T>(T prefab, int initialSize, Transform poolParent)
+    public ObjectPool (T prefab, int initialSize, Transform poolParent)
     {
         this.prefab = prefab;
         this.poolParent = poolParent;
@@ -235,7 +235,7 @@ public class ObjectPool<T> where T : MonoBehaviour
     
     private void CreateNewObject()
     {
-        T newObj = GameObject.Instantiate(prefab, poolParent);
+        T newObj = Object.Instantiate(prefab, poolParent);
         newObj.gameObject.SetActive(false);
         pool.Enqueue(newObj);
     }
@@ -302,7 +302,7 @@ public class Bullet : MonoBehaviour
     
     void Start()
     {
-        poolManager = FindObjectOfType<BulletPoolManager>();
+        poolManager = FindFirstObjectByType<BulletPoolManager>();
     }
     
     void OnEnable()
@@ -312,7 +312,7 @@ public class Bullet : MonoBehaviour
     
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * (speed * Time.deltaTime));
         timer -= Time.deltaTime;
         
         if(timer <= 0)
